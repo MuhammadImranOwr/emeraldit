@@ -31,9 +31,7 @@ const Home = async () => {
               Fields We Serve: Tailored Solutions for Various Industries
             </h2>
             <p className="pb-10">
-              Tailored solutions for diverse industries, including finance,
-              healthcare, education, retail, and more. Emerald IT provides
-              customised IT services to meet the unique needs of each sector.
+            Tailored solutions for diverse industries, including finance, healthcare, education, retail, and more. As a leading IT service provider, Emerald IT provides customised professional IT services in Melbourne, Sydney and beyond to meet the unique needs of each sector.
             </p>
           </div>
 

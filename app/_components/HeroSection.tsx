@@ -11,7 +11,7 @@ export function HeroSection() {
           </h1>
 
           <p className="font-dmSans text-custome-paragraph md:text-xl text-center md:text-left  ">
-          As a leading IT Service Provider, Emerald IT in Australia will assess your technology needs and deliver the best IT solutions. From basic support to complex IT needs, our expertise ensures bespoke IT solutions for your business. Let us show you how!
+          As a leading IT solution provider, Emerald IT will assess your technology needs and deliver professional IT services in Australia. From basic support to complex IT needs, our expertise ensures bespoke IT solutions for your business. Let us show you how!
           </p>
           <CtaButton href="/" title="Talk to Our Expert" />
         </div>

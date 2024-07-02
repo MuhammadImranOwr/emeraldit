@@ -73,7 +73,7 @@ export function Footer() {
           <div className="space-y-4 xl:justify-self-center">
           <Image src={"/footerlogo.png"} alt="" width={800} height={720} />
             <p className="text-white/85">
-            We specialise in providing IT services to small and medium enterprises, educational institutions, government agencies, and businesses with 10 to 1000 employees in need of reliable IT support.
+            We specialise in providing professional IT services to small and medium enterprises, educational institutions, government agencies, and businesses with 10 to 1000 employees in need of reliable IT support.
             </p>
             <ul className="flex items-center gap-4">
               {socialLinks.map((link, index) => (
