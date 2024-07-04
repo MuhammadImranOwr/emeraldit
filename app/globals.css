@@ -146,5 +146,43 @@ footer.movedown {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  min-height: 450px;
 }
+
+
+@media screen and (max-width: 830px) {
+  .carousel-control.next{
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
+    top: 107%;
+  }
+  .carousel-control.previous{
+    left: 0px;
+    right:80px;
+    margin: 0 auto;
+    top: 107%;
+    bottom: 0;
+  }
+
+  .wrapper{
+    
+  }
+  .wrapper .para{
+    width: 98%;
+    padding: 0px;
+  }
+  .wrapper .box{
+    width: 57%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .box{
+    width: 97%;
+  }
+}
+
+
 

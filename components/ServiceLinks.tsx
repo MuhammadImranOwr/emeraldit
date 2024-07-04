@@ -65,7 +65,7 @@ const ServiceLinks = () => {
   return (
     <section className="md:px-8 py-14 sm:px-4  space-y-8 bg-custome-services">
       <div className="container px-8 py-4">
-        <div className="text-center max-w-2xl mx-auto space-y-4">
+        <div className="text-center max-w-4xl mx-auto space-y-4">
           <h2 className="text-5xl text-custom-heading-500 font-bold">
           IT Services Australia
           </h2>
@@ -78,14 +78,14 @@ const ServiceLinks = () => {
           {serviceLinkItems.map((item) => (
             <div
               key={item.text}
-              className="flex flex-wrap whitespace-nowrap px-5 py-5 text-sm text-secondary font-medium ring-offset-background focus-visible:outline-none hover:text-custom-emerald  disabled:pointer-events-none disabled:opacity-50 items-center gap-2 border border-white bg-custome-white shadow-3xl text-wrap h-full rounded-md"
+              className="flex flex-wrap whitespace-nowrap px-7 py-5 text-sm text-secondary font-medium ring-offset-background focus-visible:outline-none hover:text-custom-emerald  disabled:pointer-events-none disabled:opacity-50 items-center gap-2 border border-white bg-custome-white shadow-3xl text-wrap h-full rounded-md"
             >
-              <div className="flex gap-5 px-7 py-7 w-full items-center">
+              <div className="lg:flex gap-5 lg:p-7 w-full items-center  sm:flex-wrap sm:p-2">
                 <div className="text-custom-emerald"> {item.icon} </div>
                 <h6 className="text-custom-heading-500 font-bold text-3xl ">  {item.text} </h6>
                 
               </div>
-              <div className=" px-7 pb-7">
+              <div className="pb-5">
                 <p className="font-dmSans text-custome-paragraph text-base pb-7 ">
                   {item.intro}
                 </p>

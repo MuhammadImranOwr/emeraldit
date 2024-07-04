@@ -27,7 +27,7 @@ const Home = async () => {
       <section className="container px-8">
         <div className="  py-14">
           <div className="text-center  mx-auto space-y-4 pt-10">
-            <h2 className="text-5xl text-custom-heading-500 font-bold">
+            <h2 className="text-4xl text-custom-heading-500 font-bold  md:text-4xl lg:text-5xl">
               Fields We Serve: Tailored Solutions for Various Industries
             </h2>
             <p className="pb-10">

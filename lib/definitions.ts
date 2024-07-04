@@ -24,20 +24,23 @@ export const formSchema = z.object({
     .email({ message: "Enter a valid email." })
     .trim(),
     
-  phone: z.coerce
-    .number({
-      required_error: "Telphone number required!",
-      invalid_type_error: "Invalid Number!",
-    })
-    .positive()
-    .min(11),
+
+    contactnumber: z
+    .string()
+    .min(10, "Phone number must be at least 10 digits")
+    .regex(/^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$/, "Invalid phone number"),
+    // contactnumber: z.coerce
+    // .number({
+    //   required_error: "Telphone number required!",
+    //   invalid_type_error: "Invalid Number!",
+    // })
+    // .positive()
+    // .min(11),
   company: z.string(),
   industry: z.string(),
   service: z.string(),
-  budget: z.coerce
-    .number()
-    .min(1, { message: "Budget cannot be 0" })
-    .positive(),
+  sector: z.string(),
+  
 });
 
 export const getInTouchFormSchema = z.object({

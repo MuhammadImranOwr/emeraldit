@@ -20,7 +20,8 @@ import {
 } from "@/components/ui/select";
 import { formSchema } from "@/lib/definitions";
 import SubmitButton from "@/components/SubmitButton";
-import { handleFormSubmission } from "@/lib/actions";
+import { quoteaform ,handleFormSubmission } from "@/lib/actions";
+import {useAction}from 'next-safe-action/hooks'
 import { toast } from "./ui/use-toast";
 
 type FormData = z.infer<typeof formSchema>;
@@ -31,39 +32,54 @@ const QuoteForm = () => {
     defaultValues: {
       fullname: "",
       email: "",
+      contactnumber: "",
       company: "",
+      sector: "",
       industry: "",
     },
   });
 
-  const onSubmit = async (data: FormData) => {
-    const formData = new FormData();
-    Object.entries(data).forEach(([key, value]) =>
-      formData.append(key, value as string)
-    );
+  const {execute,status} = useAction(quoteaform ,{
+    onSuccess(data){
+      if(data.data?.message){
+        toast({
+          title:'Success',
+          description: data.data.message,
+          variant:'success'
+        })
 
-    const response = await handleFormSubmission(formData);
-    if (response.errors) {
-      toast({
-        variant: "destructive",
-        title: "Error",
-        description: "An error occured",
-      });
-    } else {
-      toast({
-        title: "Success",
-        description: response.message,
-        variant: "success",
-      });
+        form.reset()
+      }
+    },
 
-      form.reset();
-    }
-  };
+    onError(data){
+      if(data.error){
+        toast({
+          title:'Something went wrong',
+          description:data.error.serverError,
+          variant:'destructive'
+        })
+
+      }
+    },
+    
+
+  })
+
+  function onSubmit(data: z.infer<typeof formSchema>) {
+    execute(data)
+   
+  }
+  
+
+  
+
+
   return (
     <div className="w-full">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3">
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid md:grid-cols-2 gap-6">
             <FormField
               control={form.control}
               name="fullname"
@@ -102,18 +118,16 @@ const QuoteForm = () => {
             />
             <FormField
               control={form.control}
-              name="phone"
+              name="contactnumber"
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
                     <Input
-                      {...field}
+                      maxLength={10}
                       required
-                      type="tel"
-                      inputMode="tel"
-                      autoComplete="off"
-                      placeholder="Phone No. *"
-                      className="text-black"
+                      placeholder="Enter Phone Number"
+                      {...field}
+                      className="text-black input-no-focus-ring "
                     />
                   </FormControl>
 
@@ -139,24 +153,33 @@ const QuoteForm = () => {
                 </FormItem>
               )}
             />
+
             <FormField
               control={form.control}
-              name="industry"
+              name="sector"
               render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <Input
-                      placeholder="Industry"
-                      {...field}
-                      className="text-black"
-                    />
+                    <Select
+                      name="sector"
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}>
+                      <FormControl>
+                        <SelectTrigger>
+                          <SelectValue placeholder="sector" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        <SelectItem value="sector1">sector1</SelectItem>
+                        <SelectItem value="sector2">sector2</SelectItem>
+                      </SelectContent>
+                    </Select>
                   </FormControl>
 
                   <FormMessage />
                 </FormItem>
               )}
             />
-
             <FormField
               control={form.control}
               name="service"
@@ -166,8 +189,7 @@ const QuoteForm = () => {
                     <Select
                       name="service"
                       onValueChange={field.onChange}
-                      defaultValue={field.value}
-                    >
+                      defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger>
                           <SelectValue placeholder="Service" />
@@ -192,31 +214,10 @@ const QuoteForm = () => {
                 </FormItem>
               )}
             />
-
-            <FormField
-              control={form.control}
-              name="budget"
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <Input
-                      type="number"
-                      inputMode="numeric"
-                      autoComplete="off"
-                      placeholder="Budget *"
-                      min={0}
-                      {...field}
-                      className="text-black"
-                    />
-                  </FormControl>
-
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
           </div>
 
           <SubmitButton
+            status=""
             className="bg-custom-purple-400 hover:bg-custom-purple-500 hover:text-white uppercase px-10 py-6 text-xl"
             text="Submit "
           />

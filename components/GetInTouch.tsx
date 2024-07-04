@@ -1,38 +1,34 @@
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
-import GetInTouchForm from "./GetInTouchForm";
 import Link from "next/link";
-
 import Image from "next/image";
-
 import Map from "./map";
 import { MapProvider } from "@/providers/map-provider";
+import QuoteForm from "./QuoteForm";
 
 const GetInTouch = () => {
   return (
     <>
       <section>
-        <div className="container px-8 sm:px-20 flex h-full items-center flex-wrap md:flex-nowrap justify-center md:justify-between gap-4">
+        <div className="container p-8 sm:px-20 flex h-full items-center flex-wrap md:flex-nowrap justify-center md:justify-between gap-4">
           <div className="lg:pe-28 space-y-8  text-center md:text-left md:pe-40 ">
             <h1 className="text-6xl text-center md:text-left text-custom-heading-500 font-bold">
-              <span className="text-custom-emerald font-bold">Connect</span> Get
-              In Touch
+              <span className="text-custom-emerald font-bold">Get in Touch</span> with Our Experts
             </h1>
 
             <p className="font-dmSans text-custome-paragraph md:text-xl text-center md:text-left  ">
-              We&apos;re here to answer any questions you may have. Feel free to
-              reach out to us.
+            Contact us for expert IT support and tailored solutions. We're ready to assist you with all your technology needs.
             </p>
           </div>
 
           <div className="">
-            <Image src={"/intro-image.png"} alt="" width={800} height={720} />
+            <Image src={"/contactus.png"} alt="" width={800} height={720} />
           </div>
         </div>
       </section>
 
-      <section className="bg-custom-heading-500 text-white py-10 px-6 sm:px-12 md:px-20">
+      <section className=" text-white py-10 px-6 sm:px-12 md:px-20">
         <div className="container py-14 px-0  flex items-start  gap-8 md:gap-20  flex-wrap md:flex-nowrap">
           <div className="space-y-4 px-7 py-20  bg-custom-emerald w-2/5 h-4/5">
             <div className="flex items-center gap-4">
@@ -82,19 +78,10 @@ const GetInTouch = () => {
               </div>
             </div>
 
-            {/* <div className="flex items-center pt-4 max-w-lg">
-              <Input
-                className="rounded-l-sm rounded-r-none text-black"
-                placeholder="Subscribe To Newsletter"
-              />
-              <SubmitButton
-                text="Subscribe"
-                className="rounded-r-sm rounded-l-none bg-custom-purple-300/50 hover:bg-custom-purple-300 px-8"
-              />
-            </div> */}
           </div>
           <div className="w-3/5 ">
-            <GetInTouchForm />
+         
+            <QuoteForm />
           </div>
         </div>
       </section>

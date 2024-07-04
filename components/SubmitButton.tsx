@@ -9,6 +9,7 @@ const SubmitButton = ({
   text,
   variant,
   className,
+  status
 }: {
   text: string;
   variant?:
@@ -21,13 +22,13 @@ const SubmitButton = ({
     | null
     | undefined;
   className?: string;
+  status: string
 }) => {
-  const { pending } = useFormStatus();
   return (
     <Button
       variant={variant}
       type="submit"
-      disabled={pending}
+      disabled={status === 'executing'}
       className={cn("bg-transparent text-white", className)}
     >
       {text}

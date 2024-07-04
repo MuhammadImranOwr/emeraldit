@@ -57,8 +57,8 @@ export function Footer() {
 
   return (
     <>
-      <div className="container w-3/5 mt-8 p-8  bg-custome-services shadow-3xl ">
-        <div className="flex justify-items-center  h-full items-center sm:justify-center flex-wrap  md:justify-between gap-12  ">
+      <div className="container w-11/12 md:w-3/4 mt-8 p-8  bg-custome-services shadow-3xl ">
+        <div className="flex justify-items-center  h-full items-center justify-center sm:justify-center flex-wrap  md:justify-between gap-12  ">
           <h2 className="text-4xl  text-custom-heading-500 font-semibold sm:text-3xl text-center md:text-4xl lg:text-left"> Talk to Emerald IT Experts Today </h2>
           <CtaButton
             href="/"
@@ -67,7 +67,7 @@ export function Footer() {
           />
         </div>
       </div>
-      <footer className="bg-custom-heading-500 text-white pt-20 px-20 space-y-2 -mt-12 absolute movedown sm:space-y-8">
+      <footer className="bg-custom-heading-500 text-white pt-20 lg:px-20 space-y-2 -mt-12 absolute movedown sm:space-y-8 sm:px-10">
         <div className="p-8 grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-8">
           {/* Logo with text */}
           <div className="space-y-4 xl:justify-self-center">
