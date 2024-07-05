@@ -12,7 +12,7 @@ import { PiMicrophoneStageFill } from "react-icons/pi";
 import { PiStudentBold } from "react-icons/pi";
 
 import TechIndustrys from "@/components/TechIndustry";
-import FreeConsultation from "@/components/freeconsultation";
+import FreeConsultation from "@/components/FreeConsultation";
 import TestimonailSliderTwo from "@/components/TestimonailSlidersTwo";
 
 const Home = async () => {

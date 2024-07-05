@@ -1,16 +1,9 @@
 "use client";
-
 import React from "react";
-
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+
 
 export interface TestimonailSliderProps {
   review: string;
@@ -76,12 +69,13 @@ const TestimonailSlider = () => {
 
   return (
     <Carousel
-      className="w-full"
-      plugins={[plugin.current]}
-      opts={{
-        duration: 3000,
-        loop: true,
-        align: "center",
+    className="w-full"
+    plugins={[plugin.current]}
+    opts={{
+      duration: 3000,
+      loop: true,
+      align: "start", // Align items to the start (left) of the carousel
+      axis: "x" as const, // Specify direction as "horizontal"
       }}
     >
       <CarouselContent className="-ml-4">
