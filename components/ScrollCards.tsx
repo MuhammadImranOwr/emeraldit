@@ -34,9 +34,9 @@ const ScrollCards = ({
         loop: true,
       }}
       plugins={[
-        Autoplay({
-          delay: 4500,
-        }),
+        // Autoplay({
+        //   delay: 4500,
+        // }),
       ]}
       className="mx-auto mt-8 w-full"
     >
