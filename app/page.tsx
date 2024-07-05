@@ -13,6 +13,7 @@ import { PiStudentBold } from "react-icons/pi";
 
 import TechIndustrys from "@/components/TechIndustry";
 import FreeConsultation from "@/components/freeconsultation";
+import TestimonailSliderTwo from "@/components/TestimonailSlidersTwo";
 
 const Home = async () => {
   return (
@@ -20,22 +21,42 @@ const Home = async () => {
       <HeroSection />
       <ServiceLinks />
 
-      <section className="container px-8">
+      <section className="container px-8 ">
         <FreeConsultation />
       </section>
 
-      <section className="container px-8">
-        <div className="  py-14">
-          <div className="text-center  mx-auto space-y-4 pt-10">
-            <h2 className="text-4xl text-custom-heading-500 font-bold  md:text-4xl lg:text-5xl">
+      
+
+      
+      {/* <WhyUsSection /> */}
+
+      <section>
+        <div className="container py-14 content-center w-full h-72 sm:h-72 md:h-80 lg:h-96 xl:h-104 bg-custom">
+          <div className="space-y-4 text-center z-20">
+            <h2 className="text-white text-4xl max-w-3xl font-semibold text-center mx-auto">
+              Ready to Eliminate IT Problems?
+            </h2>
+            <p className="text-gray-50 font-lexend text-center max-w-3xl mx-auto">
+              From professional IT services and cybersecurity to hardware
+              procurement and beyond, Emerald IT has you covered. Partner with
+              us to turn your IT challenges into opportunities for success.
+            </p>
+            <CtaButton href="/contact" title="Get Expert IT Support Today" />
+          </div>
+        </div>
+      </section>
+      <section className="container px-8 ">
+        <div className="py-12 ">
+          <div className="text-center  mx-auto space-y-8 lg:px-12 sm:px-0 ">
+            <h2 className="text-4xl text-custom-heading-500 font-bold  md:text-4xl lg:text-5xl ">
               Fields We Serve: Tailored Solutions for Various Industries
             </h2>
-            <p className="pb-10">
+            <p className="font-dmSans text-custome-paragraph ">
             Tailored solutions for diverse industries, including finance, healthcare, education, retail, and more. As a leading IT service provider, Emerald IT provides customised professional IT services in Melbourne, Sydney and beyond to meet the unique needs of each sector.
             </p>
           </div>
 
-          <div className="grid w-full grid-cols-1 bg-custom-emerald   sm:grid-cols-2 md:grid-cols-5 gap-3 md:gap-5 bg-transparent">
+          <div className="grid w-full grid-cols-1 bg-custom-emerald   sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 bg-transparent lg:grid-cols-5 pt-10">
             <div className="flex  whitespace-nowrap px-5 py-5 text-sm text-secondary font-medium ring-offset-background hover:bg-custom-heading-500 focus-visible:outline-none   disabled:pointer-events-none disabled:opacity-50 items-center gap-2 border border-white bg-custom-emerald shadow-3xl text-wrap h-full rounded-md">
               <div className="text-custom-white">
                 {" "}
@@ -86,28 +107,11 @@ const Home = async () => {
           </div>
         </div>
       </section>
-      {/* <WhyUsSection /> */}
-
-      <section>
-        <div className="container px-8 py-12 content-center w-full h-72 sm:h-72 md:h-80 lg:h-96 xl:h-104 bg-custom">
-          <div className="space-y-4 text-center z-20">
-            <h2 className="text-white text-4xl max-w-3xl font-semibold text-center mx-auto">
-              Ready to Eliminate IT Problems?
-            </h2>
-            <p className="text-gray-50 font-lexend text-center max-w-3xl mx-auto">
-              From professional IT services and cybersecurity to hardware
-              procurement and beyond, Emerald IT has you covered. Partner with
-              us to turn your IT challenges into opportunities for success.
-            </p>
-            <CtaButton href="/contact" title="Get Expert IT Support Today" />
-          </div>
-        </div>
-      </section>
-
-      <section className="container px-8 py-10 content-center space-y-8">
-        <h2 className="text-center text-white text-4xl">Our Trusted Clients</h2>
+      <section className="py-16 content-center space-y-8">
+        <h2 className="text-center text-4xl text-custom-heading-500 font-bold md:text-4xl lg:text-5xl">Our Trusted Clients</h2>
 
         <TestimonailSlider />
+        <TestimonailSliderTwo />
       </section>
 
       <section>

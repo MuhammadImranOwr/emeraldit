@@ -86,6 +86,10 @@ const config = {
         "custome-paragraph" : "hsla(174, 19%, 31%, 1)",
         "custome-services" : "hsla(180, 16%, 96%, 1)",
         "custome-white" : " hsla(0, 0%, 100%, 1)",
+        "customr-inputborder" :" hsla(174, 19%, 31%, 1)",
+        "custome-foucsbgg" :"hsla(0, 0%, 46%, 1)",
+        
+
 
       },
       borderRadius: {

@@ -10,6 +10,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { StaticImageData } from "next/image";
+
 export interface TechIndustryProps {
   image: StaticImageData;
   cat: string;
@@ -50,23 +51,31 @@ const techindustry: TechIndustryProps[] = [
   {
     image: tech1,
     cat: "Technology",
-    heading:  "The Impact of Technology on the Workplace: How Technology is Changing",
+    heading:
+      "The Impact of Technology on the Workplace: How Technology is Changing",
   },
 ];
+
 const TechIndustrys = () => {
   return (
     <div>
-      <section className="container flex py-10 gap-8  flex-wrap p-7 lg:flex-nowrap justify-between">
-        <div className="w-full  lg:w-2/5 space-y-8">
+      <section className="container flex py-10 gap-8 flex-wrap p-7 lg:flex-nowrap justify-between">
+        <div className="w-full lg:w-2/5 space-y-8">
           <h2 className="text-4xl text-custom-heading-500 font-bold">
-          Latest Trends in the Tech Industry{" "}
+            Latest Trends in the Tech Industry
           </h2>
-          <p className="lg:max-w-md">
-          Our blog keeps you updated with the latest trends in the tech industry. Explore in-depth articles on network infrastructure advancements, cutting-edge cybersecurity practices, innovative software solutions, and emerging cloud technologies. Learn about the impact of AI, machine learning, and IoT on various sectors. Discover how Emerald IT's services align with these trends to keep your business at the forefront of the tech revolution.
+          <p className="w-full font-dmSans text-custome-paragrap">
+            Our blog keeps you updated with the latest trends in the tech
+            industry. Explore in-depth articles on network infrastructure
+            advancements, cutting-edge cybersecurity practices, innovative
+            software solutions, and emerging cloud technologies. Learn about
+            the impact of AI, machine learning, and IoT on various sectors.
+            Discover how Emerald IT's services align with these trends to keep
+            your business at the forefront of the tech revolution.
           </p>
         </div>
-        <div className="w-full  lg:w-3/5">
-          <Carousel className="w-full ">
+        <div className="w-full lg:w-3/5 relative">
+          <Carousel className="w-full">
             <CarouselContent className="-ml-1">
               {techindustry.map((item) => (
                 <CarouselItem
@@ -75,26 +84,23 @@ const TechIndustrys = () => {
                 >
                   <div className="p-1">
                     <Card>
-                      <CardContent className="flex aspect-square items-center justify-center p-6">
+                      <CardContent className="flex aspect-square items-center justify-center p-4">
                         <span className="text-2xl font-semibold">
                           <Image
                             src={item.image}
                             alt={item.heading}
-                            
                             width={500}
                             height={300}
                           />
                           <div>
-                            {" "}
                             <h6 className="text-custom-emerald text-lg py-4">
-                              {item.cat}{" "}
-                            </h6>{" "}
+                              {item.cat}
+                            </h6>
                           </div>
                           <div>
-                            {" "}
                             <h3 className="text-1xl text-custom-heading-500 font-semibold">
                               {item.heading}
-                            </h3>{" "}
+                            </h3>
                           </div>
                         </span>
                       </CardContent>
@@ -103,9 +109,9 @@ const TechIndustrys = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="carousel-control previous transform -translate-y-1/2 bg-custom-emerald text-wrap text-white hover:bg-custom-heading-500 hover:text-white" />
-            <CarouselNext className="carousel-control next transform -translate-y-1/2 bg-custom-emerald text-white hover:bg-custom-heading-500 hover:text-white" />
-          </Carousel>{" "}
+            <CarouselPrevious className="carousel-control previous absolute left-0 bottom-0 bg-custom-emerald text-wrap text-white hover:bg-custom-heading-500 hover:text-white" />
+            <CarouselNext className="carousel-control next absolute left-0 bottom-0 bg-custom-emerald text-white hover:bg-custom-heading-500 hover:text-white" />
+          </Carousel>
         </div>
       </section>
     </div>

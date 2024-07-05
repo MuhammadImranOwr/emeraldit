@@ -24,7 +24,7 @@ export async function Header() {
   const navItems: NavItemTypes[] = [
     { title: "Home", href: "/", children: [] },
     { title: "Services", href: "/services", children: [] },
-    { title: "About", href: "/about", children: [] },
+    { title: "About", href: "/aboutus", children: [] },
     { title: "Who We Work With", href: "/insights", children: [] },
     { title: "Blogs", href: "/blogs", children: [] },
     { title: "Contact Us", href: "/contact", children: [] },

@@ -5,15 +5,9 @@ import { RiCornerDownRightFill } from "react-icons/ri";
 const FreeConsultation = () => {
   return (
     <div>
-      <section className="container">
-        <div className="  py-14">
-          <div className="text-center max-w-2xl mx-auto space-y-4">
-            <h2 className="text-5xl text-custom-heading-500 font-bold">
-              Free Consultation
-            </h2>
-          </div>
-        </div>
-        <div className="container px-4 sm:px-10 flex h-full  flex-wrap md:flex  lg:flex-nowrap justify-between gap-4">
+      <section className="">
+       
+        <div className="container py-16 sm:px-10 flex h-full  flex-wrap md:flex  lg:flex-nowrap justify-between gap-4">
           <div className="lg:w-1/2  w-full space-y-5">
             <h3 className="text-3xl text-custom-heading-500   font-bold">
             We Are Perfect IT Solutions For Your Business

@@ -108,7 +108,7 @@ html {
 
 .carousel-control {
   position: absolute;
-  top: 50%;
+  top: 80% !important;
   transform: translateY(-50%);
 }
 .carousel-control.previous {
@@ -117,6 +117,7 @@ html {
 }
 .carousel-control.next {
   left: -50px;
+  
 }
 footer.movedown {
   z-index: -1;
@@ -151,7 +152,13 @@ footer.movedown {
 
 
 @media screen and (max-width: 830px) {
+
+  .carousel-control{
+    top: 107% !important;
+  }
   .carousel-control.next{
+
+
     left: 0;
     right: 0;
     margin: 0 auto;
