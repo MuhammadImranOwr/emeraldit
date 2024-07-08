@@ -1,107 +1,89 @@
 import Image from "next/image";
-import { RiCornerDownRightFill } from "react-icons/ri";
+import { BsCheck2Circle } from "react-icons/bs";
+
 const AboutDeliveringITSolution = () => {
   return (
     <>
-      <section className="md:px-8 py-14 sm:px-4  space-y-8 bg-custome-services">
-        <div className="container px-8 sm:px-20 flex h-full items-center flex-wrap  justify-center md:justify-between gap-4 lg:flex-nowrap">
-          <div className="lg:w-4/12  w-full space-y-5">
-            <Image src={"/intro-image.png"} alt="" width={800} height={720} />
+      <section className="pb-32 md:px-8 py-14 sm:px-4  space-y-8 bg-custome-services">
+        <div className="container px-8 sm:px-20 flex h-full items-center flex-wrap justify-center md:justify-between gap-14 lg:flex-nowrap">
+          <div className="lg:w-2/5 sm:w-full space-y-5">
+            <Image src={"/emeraiddifference.png"} alt="" width={800} height={720} />
           </div>
-          <div className="lg:pe-28 space-y-8  text-center md:text-left md:pe-40  lg:w-4/6  w-full ">
-            <h3 className="text-3xl text-custom-heading-500   font-bold">
-              We Are Perfect IT Solutions For Your Business
-            </h3>
+          <div className="lg:w-3/5 sm:w-full space-y-8  text-center md:text-left ">
+            <h2 className="text-3xl text-custom-heading-500   font-bold">
+            The Emerald IT Difference
+            </h2>
 
             <p className="font-dmSans text-custome-paragraph md:text-xl text-center md:text-left  ">
-              As a leading IT solution provider, Emerald IT will assess your
-              technology needs and deliver professional IT services in
-              Australia. From basic support to complex IT needs, our expertise
-              ensures bespoke IT solutions for your business. Let us show you
-              how!
+            Our journey began with a passion for technology and a commitment to delivering bespoke IT solutions for SMBs. Driven by innovation, we transformed IT services across Queensland, earning trust nationwide from Brisbane to Melbourne. We cater to SMBs, SMEs, large enterprises, government entities, and educational institutions. At Emerald IT, we understand your business and IT needs, providing tailored solutions to help you perform at your best with local, expert support. Trust us to protect your digital assets and eliminate risks effectively. 
             </p>
 
-            <div className="flex">
-              <div>
-                <ul className=" space-y-4">
+            <div className="flex justify-between">
+              <div className="w-1/2 ">
+                <ul className="space-y-4 ">
                   
                  
-                  <li className="flex items-center">
+                  <li className="flex items-center gap-1 text-custom-dark-200 font-bold	 ">
                     {" "}
                     <span>
                       {" "}
-                      <RiCornerDownRightFill color="hsla(155, 100%, 33%, 1)" />
+                      <BsCheck2Circle color="hsla(155, 100%, 33%, 1)"  size={20}/>
                     </span>
-                    24/7 Support & assistance - Our team is here to assist you
-                    anytime
+                    Network Infrastructure 
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center gap-1 text-custom-dark-200 font-bold	 ">
                     {" "}
                     <span>
                       {" "}
-                      <RiCornerDownRightFill color="hsla(155, 100%, 33%, 1)" />
+                      <BsCheck2Circle color="hsla(155, 100%, 33%, 1)" size={20} />
                     </span>
-                    Quick Response - We've invested in top tools and talent for
-                    responsive client support.
+                    Cloud Services 
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center gap-1 text-custom-dark-200 font-bold	 ">
                     {" "}
                     <span>
                       {" "}
-                      <RiCornerDownRightFill color="hsla(155, 100%, 33%, 1)" />
+                      <BsCheck2Circle color="hsla(155, 100%, 33%, 1)"  size={20}  />
                     </span>
-                    We recruit top talent from AU, and NZ, offering structured
-                    training and support.
+                    Cyber Security Services 
                   </li>
-                  <li className="flex items-center">
+                  <li className="flex items-center gap-1 text-custom-dark-200 font-bold	 ">
                     {" "}
                     <span>
                       {" "}
-                      <RiCornerDownRightFill color="hsla(155, 100%, 33%, 1)" />
+                      <BsCheck2Circle color="hsla(155, 100%, 33%, 1)" size={20} />
                     </span>
-                    No Risk - We mitigate technical risks with flexible terms
-                    and guarantees.
+                    Equipment Management 
                   </li>
                 </ul>
               </div>
-              <div>
+              <div className="w-1/2" >
               <ul className=" space-y-4">
-                <li className="flex items-center pt-1">
+                <li className="flex items-center  gap-1 text-custom-dark-200 font-bold ">
                   {" "}
                   <span>
                     {" "}
-                    <RiCornerDownRightFill color="hsla(155, 100%, 33%, 1)" />{" "}
+                    <BsCheck2Circle color="hsla(155, 100%, 33%, 1)" size={20} />{" "}
                   </span>
-                  Our tech teams are experienced in designing and supporting
-                  full-spectrum solutions
+                  Software Solutions 
                 </li>
-                <li className="flex items-center">
+                <li className="flex items-center gap-1 text-custom-dark-200 font-bold ">
                   {" "}
                   <span>
                     {" "}
-                    <RiCornerDownRightFill color="hsla(155, 100%, 33%, 1)" />
+                    <BsCheck2Circle color="hsla(155, 100%, 33%, 1)" size={20} />
                   </span>
-                  Stay always online and connected with our 99.99% guaranteed
-                  Uptime
+                  Website Solutions 
                 </li>
-                <li className="flex items-center">
+                <li className="flex items-center gap-1 text-custom-dark-200 font-bold  ">
                   {" "}
                   <span>
                     {" "}
-                    <RiCornerDownRightFill color="hsla(155, 100%, 33%, 1)" />
+                    <BsCheck2Circle color="hsla(155, 100%, 33%, 1)" size={20}  />
                   </span>
-                  24/7 Support & assistance - Our team is here to assist you
-                  anytime
+                  Payment Gateway 
                 </li>
-                <li className="flex items-center">
-                  {" "}
-                  <span>
-                    {" "}
-                    <RiCornerDownRightFill color="hsla(155, 100%, 33%, 1)" />
-                  </span>
-                  Quick Response - We've invested in top tools and talent for
-                  responsive client support.
-                </li>
+                
                 
               </ul>
               </div>

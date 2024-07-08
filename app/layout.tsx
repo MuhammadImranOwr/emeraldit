@@ -31,8 +31,8 @@ export default async function RootLayout({
       <body
         className={cn(
           "font-lato antialiased overflow-x-hidden min-h-screen",
-        lato.variable
-    
+        lato.variable,
+    dmSans.variable
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light">

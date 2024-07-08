@@ -151,6 +151,14 @@ footer.movedown {
 }
 
 
+.aboutuscta {
+  background-image: url("/servicescta.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 450px;
+}
+
 @media screen and (max-width: 830px) {
 
   .carousel-control{

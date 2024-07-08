@@ -28,6 +28,7 @@ export async function Header() {
     { title: "Who We Work With", href: "/insights", children: [] },
     { title: "Blogs", href: "/blogs", children: [] },
     { title: "Contact Us", href: "/contact", children: [] },
+    { title: "Equipment Management", href: "/equipmentmanagement", children: [] },
   ];
 
   // Append subservice pages to the navitems

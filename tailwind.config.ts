@@ -34,7 +34,7 @@ const config = {
         lexend: ["var(--font-lexend)"],
         jakarta: ["var(--font-jakarta)"],
         lato : ["var(--font-lato)"],
-        dmSans : ["var--(--font-DM-Sans)"],
+        dmSans : ["var(--font-DM-Sans)"],
 
       },
       colors: {
