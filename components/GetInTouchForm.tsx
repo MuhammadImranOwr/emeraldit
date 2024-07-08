@@ -19,7 +19,6 @@ import SubmitButton from "./SubmitButton";
 import { contactusform, handleContactForm } from "@/lib/actions";
 import { useFormState } from "react-dom";
 import { useAction } from "next-safe-action/hooks";
-
 const GetInTouchForm = () => {
   const form = useForm<z.infer<typeof getInTouchFormSchema>>({
     resolver: zodResolver(getInTouchFormSchema),
