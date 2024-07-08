@@ -12,8 +12,10 @@ import { PiMicrophoneStageFill } from "react-icons/pi";
 import { PiStudentBold } from "react-icons/pi";
 
 import TechIndustrys from "@/components/TechIndustry";
-import FreeConsultation from "@/components/FreeConsultation";
+
 import TestimonailSliderTwo from "@/components/TestimonailSlidersTwo";
+
+import FreeConsultation from "@/components/FreeConsultation";
 
 const Home = async () => {
   return (
@@ -22,7 +24,7 @@ const Home = async () => {
       <ServiceLinks />
 
       <section className="container px-8 ">
-        <FreeConsultation />
+      <FreeConsultation />
       </section>
 
       
